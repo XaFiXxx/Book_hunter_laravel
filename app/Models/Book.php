@@ -10,7 +10,7 @@ class Book extends Model
     use HasFactory;
 
     public function author() {
-        return $this->belongsTo(Authors::class);
+        return $this->belongsTo(Author::class);
     }
 
     public function category() {
