@@ -5,7 +5,7 @@
             <div class="flex items-center">
               <a
                 class="text-white font-bold text-xl flex items-center"
-                href="index.html"
+                href="/"
               >
                 <svg viewBox="0 0 24 24" class="w-8 h-8 mr-2">
                   <path
@@ -47,12 +47,12 @@
             <div class="hidden md:flex items-center">
               <a
                 class="text-gray-300 hover:text-white px-3 py-2"
-                href="books.html"
+                href="{{ route('books.index') }}"
                 >Books</a
               >
               <a
                 class="text-gray-300 hover:text-white px-3 py-2"
-                href="authors.html"
+                href="{{ route('authors.index') }}"
                 >Authors</a
               >
             </div>
