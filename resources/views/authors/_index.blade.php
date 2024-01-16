@@ -6,12 +6,15 @@
                 <h3 class="text-xl font-bold mb-2">{{$author->firstname}}  {{$author->lastname}}</h3>
                 <div class="flex items-center mb-2">
                     <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
-                    <span>8.9</span>
+                    <span>97966945</span>
                 </div>
                 <p class="text-gray-400">
                     {{$author->biography}}
                 </p>
-                <a href="author.html"
+                <a href="{{ route('authors.show', [
+                'id' => $author->id,
+                'slug' => \Illuminate\Support\Str::slug($author->firstname. '' . $author->lastname, '-'),
+            ]) }}"
                     class="inline-block mt-4 bg-red-500 hover:bg-red-800 rounded-full px-4 py-2 text-white">
                     More details
                 </a>

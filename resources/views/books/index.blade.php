@@ -5,7 +5,10 @@
 @stop
 
 @section('content')
-   @include('books._index', [
-    'books' => \App\Models\Book::orderBy('created_at', 'DESC')->limit(9)->get(),
-])
+@php
+ $books = \App\Models\Book::orderBy('created_at', 'DESC')->paginate(9);
+@endphp
+   @include('books._index', ['books' => $books])
+
+   <div class="mt-8 flex justify_center">{{ $books->links() }}</div>
 @stop
